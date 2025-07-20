@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.tsvetkov'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.postgresql:postgresql:42.7.7'
+
+    implementation 'dev.langchain4j:langchain4j:1.0.1'
+    implementation 'dev.langchain4j:langchain4j-ollama:1.0.1-beta6'
+
+    implementation 'ch.qos.logback:logback-classic:1.4.14'
+
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
